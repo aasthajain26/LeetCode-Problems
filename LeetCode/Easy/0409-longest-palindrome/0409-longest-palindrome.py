@@ -18,9 +18,7 @@ class Solution:
                 cnt += int((dict1[i]-1))
                 dict1[i] =1
             
-        for i in dict1:
-            if dict1[i]==1:
-                cnt += 1
-                break
+        if len(s) != cnt:
+            cnt +=1
 
         return cnt
