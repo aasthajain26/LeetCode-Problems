@@ -3,10 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        for i in range(len(nums)):
+        s=0
+        mid =0
+        e = len(nums)-1
+        
+        while(mid<=e):
 
-            for j in range(i+1,len(nums)):
-                if nums[i] > nums[j] :
-                    nums[i],nums[j] =nums[j] , nums[i]
-                
-        return nums
+            if nums[mid] ==0:
+                nums[s], nums[mid]= nums[mid], nums[s]
+                s +=1
+                mid +=1
+
+            elif nums[mid]==1:
+                mid +=1
+            else:
+                nums[mid], nums[e]= nums[e], nums[mid]
+                e -=1 
