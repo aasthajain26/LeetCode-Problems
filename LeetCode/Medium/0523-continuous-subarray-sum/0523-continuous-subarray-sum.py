@@ -8,10 +8,11 @@ class Solution:
                 #print(sum1,nums[i])
                 sum1 +=nums[i] 
                 #print(sum1 % k )
-                if sum1 % k not in dict1:
-                    dict1[sum1 % k] = i
+                rem=sum1 % k
+                if  rem not in dict1:
+                    dict1[rem] = i
                 else:
-                    if i - dict1[sum1 % k] >=2:
+                    if i - dict1[rem] >=2:
                          return True
              
                 
