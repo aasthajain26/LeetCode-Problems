@@ -9,12 +9,11 @@ class Solution:
                 sum1 +=nums[i] 
                 #print(sum1 % k )
                 rem=sum1 % k
-                if  rem not in dict1:
-                    dict1[rem] = i
-                else:
+                if  rem  in dict1:
                     if i - dict1[rem] >=2:
                          return True
+                else:
+                    dict1[rem] = i
+                    
              
-                
-
         return False
